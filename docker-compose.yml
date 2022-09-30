@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  execution:
+    build:
+      context: ./blockchain
+      dockerfile: Dockerfile.validator
+    container_name: execution
+    ports:
+      - "30303:30303"
+      - "8545:8545"
+      - "8546:8546"
+    volumes:
+      - system:/root
+    networks:
+      - system-net
+  
+  consensus:
+    build:
+      context: ./node-monitoring-app
+      dockerfile: Dockerfile
+      args:
+        - MONGO_URI="localhost:3000"
+    container_name: monitoring-app
+    volumes:
+      - system:/app/consensus
+    networks:
+      - system-net
+    depends_on:
+      - execution
+
+volumes:
+  system:
+    driver: local
+
+networks:
+  system-net:
+    driver: bridge

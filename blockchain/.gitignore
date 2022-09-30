@@ -1,0 +1,4 @@
+start.sh
+config.toml
+Dockerfile.rpc
+password.txt

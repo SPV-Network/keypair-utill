@@ -1,0 +1,26 @@
+{
+  "name": "node-setup",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "keygen": "node keygen.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "^9.0.1",
+    "bignumber.js": "^9.1.0",
+    "bip39": "^3.0.4",
+    "ethereumjs-util": "^7.1.5",
+    "ethereumjs-wallet": "^1.0.2",
+    "hdkey": "^2.0.1",
+    "inquirer": "^9.1.0",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "web3": "^1.7.5"
+  }
+}

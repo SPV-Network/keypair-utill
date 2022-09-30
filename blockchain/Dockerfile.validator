@@ -1,0 +1,10 @@
+FROM ethereum/client-go:stable
+WORKDIR /app
+COPY . /app
+# RUN echo ${PASS} > /app/password.txt
+RUN geth init /app/genesis.json
+RUN cp -r /app/.ethereum/keystore /root/.ethereum
+RUN chmod +x /app/start.sh
+EXPOSE 8551 8545 8546
+# ENTRYPOINT ["ls"]
+ENTRYPOINT ["sh","/app/start.sh"]
