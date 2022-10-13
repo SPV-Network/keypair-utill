@@ -169,28 +169,3 @@ inquirer
     console.log(error)
   }
 })
-
-/**
- * *****************************Zenith validator 40.76.21.62 details********************
- * {
-    "mnemonic": "scissors tail vapor social ivory source original slender divert there impact toss",
-    "privateKey": "d61b7b39b97984a0ec06c02aaa8bc78ce161d029e182ed38807bd1c577c2b54f",
-    "address": "0x3461b3cd62f63b4783C6Cd14a711c3EFF1bFB7b2",
-    "amountStake": "1",
-    "password": "123456789"
-  }
-  {
-  mnemonic: 'scissors tail vapor social ivory source original slender divert there impact toss',
-  privateKey: 'd61b7b39b97984a0ec06c02aaa8bc78ce161d029e182ed38807bd1c577c2b54f',
-  address: '0x3461b3cd62f63b4783C6Cd14a711c3EFF1bFB7b2',
-  amountStake: '1',
-  password: '123456789'
-  }
-  {
-  "message": "I want to stake 1000000000000000000 SPV coin to testnet from 0x3461b3cd62f63b4783c6cd14a711c3eff1bfb7b2.",
-  "amount": "1000000000000000000",
-  "timestamp": 1662637262665,
-  "signature": "0xa3e7f180b938461d3293d263c365a68a6f88702567b24efdb0a3bc584afe4011698979c1fba4847e000ec96fbce3ea595b81c2e99ee71ba41d8ea487ffa9578a1b",
-  "address": "0x3461b3cd62f63b4783C6Cd14a711c3EFF1bFB7b2"
-  }
- */
