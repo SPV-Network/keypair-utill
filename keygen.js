@@ -1,23 +1,3 @@
-#!/usr/bin/env node
-// var Wallet = require('ethereumjs-wallet');
-// const fs = require('fs');
-// const path = require('path');
-// var key = Buffer.from('14df3a7280bc4d2f6e89ba9e41cfdc7f004dd5266c6491b26ddf7739c1f539b9', 'hex');
-// var wallet = Wallet.default.fromPrivateKey(key)
-// let password = '12345678'
-// let content = wallet.toV3String(password);
-// const date = new Date();
-// // UTC--2021-11-16T09-44-31.306670631Z--00c98e68c37ed3af09d34f962a21e909714e6d681
-// content.then(data=>{
-//     let filename = 'UTC--'+date.toISOString();
-//     filename = filename.replace(':','-').replace(':','-').slice(0,24)+'.306670631Z'+'--'+JSON.parse(data).address;
-//     // console.log(filename);
-//     // 
-//     fs.writeFileSync(path.join(__dirname,'blockchain','.ethereum','keystore',filename),data)
-//     fs.writeFileSync(path.join(__dirname,'blockchain/start.sh'),"geth --config /app/config2.toml --mine --unlock 0x"+JSON.parse(data).address+" --password /app/password.txt --http --ws --allow-insecure-unlock")
-//     fs.writeFileSync(path.join(__dirname,'blockchain/password.txt'),password);
-// })
-
 import inquirer from 'inquirer';
 import Wallet from 'ethereumjs-wallet';
 import bip39 from 'bip39';
