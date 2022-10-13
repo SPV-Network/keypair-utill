@@ -88,7 +88,7 @@ const questionSetA = [
   {
     type: "confirm",
     name: "mnemonicGenerated",
-    message: "Press any key to continue",
+    message: "Press ENTER key to continue",
     default: true,
     when(answers) {
         return answers.seedOption === "no"
