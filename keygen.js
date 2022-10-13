@@ -121,7 +121,7 @@ const questionSetB = [
     type: "input",
     name: "amountStake",
     message: "How much amount you want to stake?",
-    default: "20000",
+    default: "500000000000000000000000",
   },
   {
     type: "input",
