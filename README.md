@@ -89,8 +89,8 @@ Validator keypair will be used to sign and verify blocks in the POA consensus sy
 
 Deposit Credentials file will be used while staking through launch pool.
 
-1. Clone the github repo `git clone https://github.com/codepartnerofficial/evm-node-setup.git`.
-2. Change Directory to `evm-node-setup` using `cd evm-node-setup`.
+1. Clone the github repo `git clone https://github.com/SPV-Network/keypair-utill.git`.
+2. Change Directory to `keypair-utill` using `cd keypair-utill`.
 3. Install dependencies using `npm install`.
-4. Generate keys and credential using `./keygen`
-5. Spin up docker instances using `docker-compose up`
+4. Generate keys and credential using `node ./keygen.js`
+5. Spin up docker instances using `docker-compose up -d`
