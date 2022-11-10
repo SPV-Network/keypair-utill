@@ -13,14 +13,10 @@ services:
       - system:/root
     networks:
       - system-net
-  
+
   consensus:
-    build:
-      context: ./node-monitoring-app
-      dockerfile: Dockerfile
-      args:
-        - MONGO_URI="localhost:3000"
-    container_name: monitoring-app
+    image: codepartner/spv-network:0.1.1
+    container_name: consensus
     volumes:
       - system:/app/consensus
     networks:

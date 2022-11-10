@@ -46,38 +46,17 @@ sudo apt-get install curl gnupg tar git software-properties-common build-essenti
 sudo apt install docker-compose -y
 ```
 
-- By default you can't use docker with other than root user to acheive the same you need to edit `sudo nano /lib/systemd/system/docker.service` and add `-H tcp://127.0.0.1` to `ExecStart=` line after `-H fd://` like following.
-
-```service
-[Unit]
-...
-...
-
-[Service]
-...
-...
-ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1 --containerd=/run/containerd/containerd.sock
-...
-...
-
-[Install]
-WantedBy=multi-user.target
-```
-
-- Once its done restart the docker process
+By default any user can't access that use this
 
 ```bash
-sudo systemctl daemon-reload
-sudo systemctl restart docker
+sudo usermod -aG docker app
 ```
 
-- Once restarted the docker service we need to export DOCKER_HOST permenently by editing `nano ~/.profile` and add the following line at the end of the file
+Now Login and Logout again.
 
-```bash
-export DOCKER_HOST="tcp://127.0.0.1:2375"
-```
+#### In windows
 
-- And finally source the file using `source ~/.profile`
+[Install Docker Windows](https://docs.docker.com/desktop/install/windows-install/) and [Install Docker Conpose Windows](https://docs.docker.com/compose/install/other/)
 
 ### Install `Node JS`
 
@@ -87,6 +66,8 @@ We need to install `NodeJS v16.x` but default apt package of NodeJs is lower tha
 curl -sL https://deb.nodesource.com/setup_16.x  | bash -
 sudo apt install -y nodejs
 ```
+
+[Official Guide](https://nodejs.dev/en/download) to Download and install.
 
 ## SETUP
 
