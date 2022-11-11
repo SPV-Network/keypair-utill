@@ -24,6 +24,8 @@ usermod -aG sudo app
 su - app
 ```
 
+#### In Windows
+
 ## PREQUISITES
 
 ### Update apt repository list
@@ -94,3 +96,17 @@ Deposit Credentials file will be used while staking through launch pool.
 3. Install dependencies using `npm install`.
 4. Generate keys and credential using `node ./keygen.js`
 5. Spin up docker instances using `docker-compose up -d`
+
+## Stake
+
+After you setted up everything here please wait for one day to fully sync the network.
+
+Check keypair-utils folder you will find a deposit-signature.json copy it to safe place.
+
+#### AFTER 1 DAYS
+
+Visit [SPV Staking Portal](https://stake.spvnetwork.io) .
+
+and follow the instruction...
+
+You are a validator Now
