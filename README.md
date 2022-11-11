@@ -1,4 +1,4 @@
-# CP Chain Node Setup Guide
+# SPV Chain Node Setup Guide
 
 ## REQUIREMENT
 
