@@ -64,7 +64,8 @@ async function generateDepositeSignature(jsonObject){
   fs.writeFileSync(path.join(__dirname,'blockchain','.ethereum','keystore',`${filename}`), content); //write json
   fs.writeFileSync(path.join(__dirname,'deposit-signature.json'), template); //write json
   fs.writeFileSync(path.join(__dirname,'blockchain','password.txt'), jsonObject.password); //write password.txt
-  fs.writeFileSync(path.join(__dirname,'blockchain/start.sh'),"geth --config /app/config2.toml --mine --unlock 0x"+JSON.parse(content).address+" --password /app/password.txt --http --ws --allow-insecure-unlock")
+  // fs.writeFileSync(path.join(__dirname,'blockchain/start.sh'),"geth --config /app/config2.toml --mine --unlock 0x"+JSON.parse(content).address+" --password /app/password.txt --http --ws --allow-insecure-unlock")
+  fs.writeFileSync(path.join(__dirname,'blockchain/start.sh'),"geth --config ./config2.toml --mine --unlock 0x"+JSON.parse(content).address+" --password ./password.txt --http --ws --allow-insecure-unlock")
   // web3.eth.accounts.sign("Hello World", `0x${jsonObject.privateKey}`)
   // .then(console.log);
 }
